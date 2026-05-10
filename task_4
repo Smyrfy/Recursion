@@ -1,0 +1,14 @@
+#include <iostream>
+
+double power(double a, int n) {
+    if (n == 0) return 1;
+    if (n < 0) return 1 / power(a, -n);
+    return a * power(a, n - 1);
+}
+
+int main() {
+    double a; int n;
+    std::cin >> a >> n;
+    std::cout << power(a, n) << std::endl;
+    return 0;
+}
