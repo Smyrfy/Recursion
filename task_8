@@ -1,0 +1,12 @@
+#include <iostream>
+
+int sum_array(int arr[], int size) {
+    if (size <= 0) return 0;
+    return arr[size - 1] + sum_array(arr, size - 1);
+}
+
+int main() {
+    int arr[] = {1, 2, 3, 4, 5};
+    std::cout << sum_array(arr, 5) << std::endl;
+    return 0;
+}
