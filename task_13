@@ -1,0 +1,15 @@
+#include <iostream>
+
+bool is_prime(int n, int divisor) {
+    if (n < 2) return false;
+    if (divisor * divisor > n) return true;
+    if (n % divisor == 0) return false;
+    return is_prime(n, divisor + 1);
+}
+
+int main() {
+    int n;
+    std::cin >> n;
+    std::cout << (is_prime(n, 2) ? "YES" : "NO") << std::endl;
+    return 0;
+}
