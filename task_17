@@ -1,0 +1,13 @@
+#include <iostream>
+
+int linear_search(int arr[], int size, int x) {
+    if (size == 0) return -1;
+    if (arr[size - 1] == x) return size - 1;
+    return linear_search(arr, size - 1, x);
+}
+
+int main() {
+    int arr[] = {5, 2, 9, 1, 5};
+    std::cout << "Last index: " << linear_search(arr, 5, 5) << std::endl;
+    return 0;
+}
